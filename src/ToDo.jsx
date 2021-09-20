@@ -50,12 +50,12 @@ const deleteTask = (key) => {
         className="flex m-auto justify-center"
         onSubmit={submitTask}>
         <input
-          className="border-4 border-black rounded-tl-xl"
+          className="border-2 border-black rounded-tl-xl"
           type="text"
           onChange={addTask}
         />
         <button
-          className="border-4 border-black rounded-br-xl"
+          className="border-2 border-black rounded-br-xl"
         >
           Criar Tarefa
         </button>

@@ -2,7 +2,7 @@ import React from 'react';
 import './ToDo.css';
 
 function Task(props) {  
-  const { deleteTask, completeTask } = props;
+  const { deleteTask } = props;
   // const [edit, setEdit] = useState({
   //   id: null,
   //   value: ''
@@ -23,15 +23,23 @@ function Task(props) {
   }
 
   return (
-    <div>
+    <div className="flex m-8">
       {props.todos.map((todo) => (
-        <div key={todo.key} >
-        <h3>
-          {todo.text}
-        </h3>
-          <button onClick={() => (deleteTask(todo.key))} >Deletar</button>
-          {/* <button onClick={() => (submitUpdate(todo.key))} >Editar</button> */}
+        <div
+          className="container m-2 w-40 h-40 bg-yellow-400 border-2"
+          key={todo.key}
+        >
+          <div className="container w-38 h-8 bg-yellow-500">
+            <button onClick={() => (deleteTask(todo.key))} >X</button>
+          </div>
+          <h3>
+            {todo.text}
+          </h3>
+            {/* <button onClick={() => (submitUpdate(todo.key))} >Editar</button> */}
 
+            {/* <div className="w-11 overflow-hidden inline-block bottom-0 right-0">
+              <div className=" h-24 bg-black rotate-45 transform origin-bottom-left"></div>
+            </div> */}
         </div>
       ))}
     </div>
