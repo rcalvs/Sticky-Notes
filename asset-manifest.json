@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Sticky-Notes/static/css/main.78f64f59.chunk.css",
+    "main.js": "/Sticky-Notes/static/js/main.7372d811.chunk.js",
+    "main.js.map": "/Sticky-Notes/static/js/main.7372d811.chunk.js.map",
+    "runtime-main.js": "/Sticky-Notes/static/js/runtime-main.0430273a.js",
+    "runtime-main.js.map": "/Sticky-Notes/static/js/runtime-main.0430273a.js.map",
+    "static/js/2.bca07322.chunk.js": "/Sticky-Notes/static/js/2.bca07322.chunk.js",
+    "static/js/2.bca07322.chunk.js.map": "/Sticky-Notes/static/js/2.bca07322.chunk.js.map",
+    "static/js/3.d05a1bbd.chunk.js": "/Sticky-Notes/static/js/3.d05a1bbd.chunk.js",
+    "static/js/3.d05a1bbd.chunk.js.map": "/Sticky-Notes/static/js/3.d05a1bbd.chunk.js.map",
+    "index.html": "/Sticky-Notes/index.html",
+    "static/css/main.78f64f59.chunk.css.map": "/Sticky-Notes/static/css/main.78f64f59.chunk.css.map",
+    "static/js/2.bca07322.chunk.js.LICENSE.txt": "/Sticky-Notes/static/js/2.bca07322.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0430273a.js",
+    "static/js/2.bca07322.chunk.js",
+    "static/css/main.78f64f59.chunk.css",
+    "static/js/main.7372d811.chunk.js"
+  ]
+}
