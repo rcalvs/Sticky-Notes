@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './ToDo.css';
 import Task from './Task';
 
 function ToDo() {
@@ -12,8 +11,7 @@ function addTask(event) {
     text: event.target.value,
     key: Date.now(),
     color: Math.floor(Math.random() * 7),
-    rotate: Math.floor(Math.random() * 7)
-
+    rotate: Math.floor(Math.random() * 7),
   }
   setTask(currentTask);
 }
@@ -22,6 +20,7 @@ function submitTask(event) {
   event.preventDefault();
   const newTodos = [task, ...todos];
   setTodos(newTodos);
+  console.log(task);
 }
 
 const deleteTask = (key) => {

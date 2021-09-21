@@ -1,5 +1,4 @@
 import React from 'react';
-import './ToDo.css';
 
 function Task(props) {  
   const { deleteTask } = props;
@@ -14,7 +13,7 @@ function Task(props) {
           className={`flex-col shadow-xl container m-2 w-40 h-40 bg-${colors[todo.color]}-400 transform ${rotate[todo.rotate]} relative`}
           key={todo.key}
         >
-          <div className={`container w-38 h-8 bg-${colors[todo.color]}-500 relative`}>
+          <div className={`container w-38 h-8 bg-yellow-500 relative`}>
             <svg
               onClick={() => (deleteTask(todo.key))}
               xmlns="http://www.w3.org/2000/svg" 
@@ -29,7 +28,7 @@ function Task(props) {
             {todo.text}
           </h3>
             <div className="w-11 overflow-hidden inline-block absolute bottom-0 right-0 ">
-              <div className={`h-24 bg-black rotate-45 transform origin-bottom-left bg-${colors[todo.color]}-500`}></div>
+              <div className={`h-24 bg-black rotate-45 transform origin-bottom-left bg-yellow-500`}></div>
             </div>
         </div>
       ))}
