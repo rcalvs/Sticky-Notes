@@ -10,7 +10,7 @@ function Task(props) {
     <div className="flex flex-wrap justify-center m-8 font-hand text-xl tracking-wide">
       {props.todos.map((todo) => (
         <div
-          className={`flex-col shadow-xl container m-2 w-40 h-40 bg-${colors[todo.color]}-400 transform ${rotate[todo.rotate]} relative`}
+          className={`flex-col shadow-xl container m-2 w-40 h-40 bg-yellow-400 transform ${rotate[todo.rotate]} relative`}
           key={todo.key}
         >
           <div className={`container w-38 h-8 bg-yellow-500 relative`}>
@@ -25,7 +25,7 @@ function Task(props) {
             </svg>
           </div>
           <h3 className="ml-2 text-center">
-            {todo.text}
+            {todo.tex}
           </h3>
             <div className="w-11 overflow-hidden inline-block absolute bottom-0 right-0 ">
               <div className={`h-24 bg-black rotate-45 transform origin-bottom-left bg-yellow-500`}></div>
