@@ -11,7 +11,9 @@ function addTask(event) {
   const currentTask = {
     text: event.target.value,
     key: Date.now(),
-    color: Math.floor(Math.random() * 7)
+    color: Math.floor(Math.random() * 7),
+    rotate: Math.floor(Math.random() * 7)
+
   }
   setTask(currentTask);
 }
@@ -37,7 +39,8 @@ useEffect(() => {
     const firstTask = {
       text: "Adicione alguma tarefa!",
       key: Date.now(),
-      color: 0
+      color: 0,
+      rotate: 0
     }
     const firstTodo = [firstTask, ...todos];
     setTodos(firstTodo);

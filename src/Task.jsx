@@ -5,12 +5,13 @@ function Task(props) {
   const { deleteTask } = props;
 
   const colors = ['yellow', 'green', 'blue', 'red', 'indigo', 'purple', 'pink']
+  const rotate = ['','rotate-1', 'rotate-2', 'rotate-3', '-rotate-1', '-rotate-2', '-rotate-3']
   
   return (
     <div className="flex flex-wrap justify-center m-8 font-hand text-xl tracking-wide">
       {props.todos.map((todo) => (
         <div
-          className={`flex-col shadow-xl container m-2 w-40 h-40 bg-${colors[todo.color]}-400 relative`}
+          className={`flex-col shadow-xl container m-2 w-40 h-40 bg-${colors[todo.color]}-400 transform ${rotate[todo.rotate]} relative`}
           key={todo.key}
         >
           <div className={`container w-38 h-8 bg-${colors[todo.color]}-500 relative`}>
