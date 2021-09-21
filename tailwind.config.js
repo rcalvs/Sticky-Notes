@@ -4,7 +4,9 @@ module.exports = {
   darkMode: 'class', // or 'media' or 'class' or 'false'
   theme: {
     extend: {},
-    fontFamily: {},
+    fontFamily: {
+      'hand': ['Indie Flower']
+    },
   },
   variants: {
     extend: {},
