@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './ToDo.css';
-// import '../../App.css';
 import Task from './Task';
 
 function ToDo() {
@@ -22,24 +21,29 @@ function submitTask(event) {
   setTodos(newTodos);
 }
 
-// const completeTask = (key) => {
-//   // Mudar CSS
-// }
-
 const deleteTask = (key) => {
   const remove = [...todos].filter(task => task.key !== key)
   setTodos(remove)
 }
 
-// const editTask = (key, value) => {
-//   const prevTodos = [todos];
-//   prevTodos.map((each) => {
-//     if (each.key === key) {
-//       each.text = value;
-//     }
-//   });
-//   setTodos(prev => prev.map(item => (item.key === key ? value : item)));
-// }
+useEffect(() => {
+  localStorage.setItem('todos', JSON.stringify(todos))
+},[todos]);
+
+useEffect(() => {
+  const local = localStorage.getItem('todos');
+  if (local.type === undefined) {
+    const firstTask = {
+      text: "Adicione alguma tarefa!",
+      key: Date.now()
+    }
+    const firstTodo = [firstTask, ...todos];
+    setTodos(firstTodo);
+  } else {
+    const localTodos = [local, ...todos];
+    setTodos(localTodos);
+  }
+},[]);
 
   return (
     <div className="flex-col">
@@ -50,12 +54,13 @@ const deleteTask = (key) => {
         className="flex m-auto justify-center"
         onSubmit={submitTask}>
         <input
-          className="border-2 border-black rounded-tl-xl"
+          className="border-2 px-2 border-black rounded-tl-xl"
           type="text"
+          maxLength="85"
           onChange={addTask}
         />
         <button
-          className="border-2 border-black rounded-br-xl"
+          className="border-2 px-2 border-black rounded-br-xl"
         >
           Criar Tarefa
         </button>
