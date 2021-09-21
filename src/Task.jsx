@@ -25,7 +25,7 @@ function Task(props) {
             </svg>
           </div>
           <h3 className="ml-2 text-center">
-            {todo.tex}
+            {todo.text}
           </h3>
             <div className="w-11 overflow-hidden inline-block absolute bottom-0 right-0 ">
               <div className={`h-24 bg-black rotate-45 transform origin-bottom-left bg-yellow-500`}></div>
